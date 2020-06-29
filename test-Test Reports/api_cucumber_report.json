@@ -1,0 +1,3622 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-06-29T17:56:11.554Z",
+        "line": 3,
+        "name": "TC01 - Returns list of all blog categories",
+        "description": "",
+        "id": "operations-to-blog-category;tc01---returns-list-of-all-blog-categories",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3410041100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I set the GET service endpoint for list of blog categories and receive response",
+            "match": {
+              "location": "steps.blogCategories.getListOfCategories()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12992700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4997000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 969444300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "validate response json schema with \"categoriesList.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"categoriesList.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:16.247Z",
+        "line": 18,
+        "name": "TC02 - Add a new category using id and name",
+        "description": "",
+        "id": "operations-to-blog-category;tc02---add-a-new-category-using-id-and-name;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1229464500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I have the number of categories present",
+            "match": {
+              "location": "steps.blogCategories.getCountOfCategories()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 249857000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I set the POST service endpoint for adding new blog category with id 4 and name \"Gardening\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 69
+                },
+                {
+                  "val": "\"Gardening\"",
+                  "offset": 80
+                }
+              ],
+              "location": "steps.blogCategories.addCategoryWithIdAndName(int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c201\u003e but was:\u003c500\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat steps.commonSteps.checkStatusCodeIs(commonSteps.java:24)\r\n\tat ✽.check statusCode is 201(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:12)\r\n",
+              "duration": 2999200,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "check statusCode is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999600,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "check the get list of categories response if number of categories is incremented by one",
+            "match": {
+              "location": "steps.blogCategories.checkCategoryListSizeAfterAddingNewCategory()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "check get list of categories response for the name of the item with id 4 to be \"Gardening\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 71
+                },
+                {
+                  "val": "\"Gardening\"",
+                  "offset": 79
+                }
+              ],
+              "location": "steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(int,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:17.805Z",
+        "line": 19,
+        "name": "TC02 - Add a new category using id and name",
+        "description": "",
+        "id": "operations-to-blog-category;tc02---add-a-new-category-using-id-and-name;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 79952900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I have the number of categories present",
+            "match": {
+              "location": "steps.blogCategories.getCountOfCategories()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 144915700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I set the POST service endpoint for adding new blog category with id 5 and name \"Sports\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 69
+                },
+                {
+                  "val": "\"Sports\"",
+                  "offset": 80
+                }
+              ],
+              "location": "steps.blogCategories.addCategoryWithIdAndName(int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 999300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "check statusCode is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 44974300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "check the get list of categories response if number of categories is incremented by one",
+            "match": {
+              "location": "steps.blogCategories.checkCategoryListSizeAfterAddingNewCategory()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[S]ports\u003e but was:\u003c[]ports\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:106)\r\n\tat ✽.check get list of categories response for the name of the item with id 5 to be \"Sports\"(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:15)\r\n",
+              "duration": 282837800,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "check get list of categories response for the name of the item with id 5 to be \"Sports\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 71
+                },
+                {
+                  "val": "\"Sports\"",
+                  "offset": 79
+                }
+              ],
+              "location": "steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(int,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:18.430Z",
+        "line": 30,
+        "name": "TC03 - Add a new category using name",
+        "description": "",
+        "id": "operations-to-blog-category;tc03---add-a-new-category-using-name;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 58964300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I have the number of categories present",
+            "match": {
+              "location": "steps.blogCategories.getCountOfCategories()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 186962400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I set the POST service endpoint for adding new blog category with name \"Nature\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nature\"",
+                  "offset": 71
+                }
+              ],
+              "location": "steps.blogCategories.addCategoryWithId(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 998800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "check statusCode is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 37983400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "check the get list of categories response if number of categories is incremented by one",
+            "match": {
+              "location": "steps.blogCategories.checkCategoryListSizeAfterAddingNewCategory()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[N]ature\u003e but was:\u003c[]ature\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat steps.blogCategories.checkIfAddedNameIsCorrect(blogCategories.java:41)\r\n\tat ✽.check get list of categories response for the name of the last item to be \"Nature\"(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:27)\r\n",
+              "duration": 41972000,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "check get list of categories response for the name of the last item to be \"Nature\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nature\"",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.blogCategories.checkIfAddedNameIsCorrect(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:18.789Z",
+        "line": 32,
+        "name": "TC04 - Add a new category using int data type for name",
+        "description": "",
+        "id": "operations-to-blog-category;tc04---add-a-new-category-using-int-data-type-for-name",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 21989800,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I set the POST service endpoint for adding new blog category with categoryName as 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 82
+                }
+              ],
+              "location": "steps.blogCategories.addNewBlogCategoryWithCategoryNameAsInt(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "check statusCode is 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32980300,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "check response for message \"Input payload validation failed\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Input payload validation failed\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:18.875Z",
+        "line": 39,
+        "name": "TC05 - Add a new category using an existing id and name",
+        "description": "",
+        "id": "operations-to-blog-category;tc05---add-a-new-category-using-an-existing-id-and-name",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 150910700,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I set the POST service endpoint for adding new blog category with id 4 and name \"Travel\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 69
+                },
+                {
+                  "val": "\"Travel\"",
+                  "offset": 80
+                }
+              ],
+              "location": "steps.blogCategories.addCategoryWithIdAndName(int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999800,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "check statusCode is 500",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999800,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "check response content type is \"text/html; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"text/html; charset\u003dutf-8\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 653622900,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "check title in response contains \"UNIQUE constraint failed: category.id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UNIQUE constraint failed: category.id\"",
+                  "offset": 33
+                }
+              ],
+              "location": "steps.blogCategories.checkTitleInResponseContains(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:19.713Z",
+        "line": 45,
+        "name": "TC06 - Add a new category using only id",
+        "description": "",
+        "id": "operations-to-blog-category;tc06---add-a-new-category-using-only-id",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 34977300,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I set the POST service endpoint for adding new blog category with id 11",
+            "match": {
+              "arguments": [
+                {
+                  "val": "11",
+                  "offset": 69
+                }
+              ],
+              "location": "steps.blogCategories.addNewBlogCategoryWithId(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "check statusCode is 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26983600,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "check response for message \"Input payload validation failed\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Input payload validation failed\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:19.811Z",
+        "line": 58,
+        "name": "TC07 - Delete a category with id that doesn\u0027t exist",
+        "description": "",
+        "id": "operations-to-blog-category;tc07---delete-a-category-with-id-that-doesn-t-exist;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 45972600,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "I set the DELETE service endpoint a categories with id 101 and receive response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "101",
+                  "offset": 55
+                }
+              ],
+              "location": "steps.blogCategories.deleteCategoryWithId(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000600,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "check statusCode is 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22984900,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "check response for message \"A database result was required but none was found.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A database result was required but none was found.\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:19.909Z",
+        "line": 68,
+        "name": "TC08 - Delete a category with id in endpoint",
+        "description": "",
+        "id": "operations-to-blog-category;tc08---delete-a-category-with-id-in-endpoint;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 110602900,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "I set the DELETE service endpoint a categories with id 5 and receive response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 55
+                }
+              ],
+              "location": "steps.blogCategories.deleteCategoryWithId(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999700,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "check statusCode is 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 198488700,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "check for id 5 is deleted in the list of categories response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 13
+                }
+              ],
+              "location": "steps.blogCategories.checkForIdInTheResponse(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:20.246Z",
+        "line": 77,
+        "name": "TC09 - Return a category with a list of posts for a valid category id",
+        "description": "",
+        "id": "operations-to-blog-category;tc09---return-a-category-with-a-list-of-posts-for-a-valid-category-id;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 46971300,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "I set the GET service endpoint for list of posts for category id 1 and receive response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 65
+                }
+              ],
+              "location": "steps.blogCategories.getListOfPostsForCategoryId(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 22986300,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "validate response json schema with \"listOfPostsForaCategory.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPostsForaCategory.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28981500,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "check categoryId in list of posts response is 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 46
+                }
+              ],
+              "location": "steps.blogCategories.checkCategoryIdInResponseIs(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:20.384Z",
+        "line": 85,
+        "name": "TC10 - Return a category with a list of posts for invalid category id",
+        "description": "",
+        "id": "operations-to-blog-category;tc10---return-a-category-with-a-list-of-posts-for-invalid-category-id;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 47971800,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I set the GET service endpoint for list of posts for category id 51 and receive response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "51",
+                  "offset": 65
+                }
+              ],
+              "location": "steps.blogCategories.getListOfPostsForCategoryId(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "check statusCode is 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 26982200,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "check response for message \"A database result was required but none was found.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A database result was required but none was found.\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:20.486Z",
+        "line": 93,
+        "name": "TC11 - Updates a blog category",
+        "description": "",
+        "id": "operations-to-blog-category;tc11---updates-a-blog-category;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 41976900,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "I set the PUT service endpoint for updating a blog category with id 3 and pass the updated category name \"Technology\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 68
+                },
+                {
+                  "val": "\"Technology\"",
+                  "offset": 105
+                }
+              ],
+              "location": "steps.blogCategories.updateBlogCategoryName(int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "check statusCode is 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 166903000,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "check get list of categories response for the name of the item with id 3 to be \"Technology\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 71
+                },
+                {
+                  "val": "\"Technology\"",
+                  "offset": 79
+                }
+              ],
+              "location": "steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(int,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:20.749Z",
+        "line": 95,
+        "name": "TC12 - Update a category using an id that doesn\u0027t exist",
+        "description": "",
+        "id": "operations-to-blog-category;tc12---update-a-category-using-an-id-that-doesn-t-exist",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 60964800,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "I set the PUT service endpoint for updating a blog category with id 299 and pass the updated category name \"Cycling\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "299",
+                  "offset": 68
+                },
+                {
+                  "val": "\"Cycling\"",
+                  "offset": 107
+                }
+              ],
+              "location": "steps.blogCategories.updateBlogCategoryName(int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999200,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "check statusCode is 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21988300,
+              "status": "passed"
+            },
+            "line": 98,
+            "name": "check response contains \"message\" \"A database result was required but none was found.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"message\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"A database result was required but none was found.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.blogCategories.checkResponseMessage(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Operations to blog category",
+    "description": "",
+    "id": "operations-to-blog-category",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/featureFiles/blogCategory.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-06-29T17:56:20.863Z",
+        "line": 11,
+        "name": "TC13 - Returns list of blog posts",
+        "description": "",
+        "id": "operations-to-blog-posts;tc13---returns-list-of-blog-posts;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 59966600,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I set the GET service endpoint for list of posts with parameters 1 , 2, \"true\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 65
+                },
+                {
+                  "val": "2",
+                  "offset": 69
+                },
+                {
+                  "val": "\"true\"",
+                  "offset": 72
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.getListOfPosts(int,int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 998200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29982700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 75955600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check response for 1 , 2 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                },
+                {
+                  "val": "2",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:21.099Z",
+        "line": 21,
+        "name": "TC14 - Returns list of blog posts",
+        "description": "",
+        "id": "operations-to-blog-posts;tc14---returns-list-of-blog-posts;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 46973600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I set the GET service endpoint for list of posts with parameters 2 , 2, \"true\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 65
+                },
+                {
+                  "val": "2",
+                  "offset": 69
+                },
+                {
+                  "val": "\"true\"",
+                  "offset": 72
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.getListOfPosts(int,int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 998900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25983600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c2\u003e but was:\u003c1\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(listsOfBlogPosts.java:24)\r\n\tat ✽.check response for 2 , 2 and totalPages(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogPosts.feature:18)\r\n",
+              "duration": 88947800,
+              "status": "failed"
+            },
+            "line": 18,
+            "name": "check response for 2 , 2 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 19
+                },
+                {
+                  "val": "2",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:21.295Z",
+        "line": 31,
+        "name": "TC15 - Returns list of blog posts",
+        "description": "",
+        "id": "operations-to-blog-posts;tc15---returns-list-of-blog-posts;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 41976000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I set the GET service endpoint for list of posts with parameters 1 , \"true\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 65
+                },
+                {
+                  "val": "\"true\"",
+                  "offset": 69
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.getListOfPosts(int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20989500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 81950400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "check response for 1 , 10 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                },
+                {
+                  "val": "10",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:21.463Z",
+        "line": 41,
+        "name": "TC16 - Returns list of blog posts without query parameters",
+        "description": "",
+        "id": "operations-to-blog-posts;tc16---returns-list-of-blog-posts-without-query-parameters;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 23987000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I set the GET service endpoint for list of posts without parameters",
+            "match": {
+              "location": "steps.listsOfBlogPosts.getListOfPostsWithoutQueryParams()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999600,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 30982200,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 89950500,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "check response for 1 , 10 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                },
+                {
+                  "val": "10",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:21.640Z",
+        "line": 52,
+        "name": "TC17 -  Create a new blog post",
+        "description": "",
+        "id": "operations-to-blog-posts;tc17----create-a-new-blog-post;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 60963900,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I have the number of posts present",
+            "match": {
+              "location": "steps.createNewPost.getNumberOfPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 194888200,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "I set the POST service endpoint for adding new blog post for 1, with \"body\" and \"title\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 61
+                },
+                {
+                  "val": "\"body\"",
+                  "offset": 69
+                },
+                {
+                  "val": "\"title\"",
+                  "offset": 80
+                }
+              ],
+              "location": "steps.createNewPost.addNewPostForCategoryId(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000700,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "check statusCode is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999100,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 60963800,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "check the get list of posts number of posts is incremented by one",
+            "match": {
+              "location": "steps.createNewPost.checkPostsListSizeAfterAddingNewPost()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 143917600,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "check get list of posts response to match categoryID to 1, body to \"body\",title to \"title\" of the last post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 56
+                },
+                {
+                  "val": "\"body\"",
+                  "offset": 67
+                },
+                {
+                  "val": "\"title\"",
+                  "offset": 83
+                }
+              ],
+              "location": "steps.createNewPost.checkNewPostBodyAndTitle(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:22.132Z",
+        "line": 54,
+        "name": "TC18 - Create a new blog post with no body",
+        "description": "",
+        "id": "operations-to-blog-posts;tc18---create-a-new-blog-post-with-no-body",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 71961500,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I have the number of posts present",
+            "match": {
+              "location": "steps.createNewPost.getNumberOfPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 22987900,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I set the POST service endpoint for adding new blog post for category_id 1,  and \"title\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 73
+                },
+                {
+                  "val": "\"title\"",
+                  "offset": 81
+                }
+              ],
+              "location": "steps.createNewPost.addBlogPostWithOutBody(int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "check statusCode is 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17988600,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "check response for message \"Input payload validation failed\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Input payload validation failed\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:22.269Z",
+        "line": 61,
+        "name": "TC19 - Create a new blog post with no title",
+        "description": "",
+        "id": "operations-to-blog-posts;tc19---create-a-new-blog-post-with-no-title",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 48971900,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "I have the number of posts present",
+            "match": {
+              "location": "steps.createNewPost.getNumberOfPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 18991500,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "I set the POST service endpoint for adding new blog post for category_id 1 and with \"body\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 73
+                },
+                {
+                  "val": "\"body\"",
+                  "offset": 84
+                }
+              ],
+              "location": "steps.createNewPost.addBlogPostWithOutTitle(int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "check statusCode is 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17991200,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "check response for message \"Input payload validation failed\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Input payload validation failed\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:22.376Z",
+        "line": 68,
+        "name": "TC20 - Create a new blog post with no categoryId",
+        "description": "",
+        "id": "operations-to-blog-posts;tc20---create-a-new-blog-post-with-no-categoryid",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 44976800,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "I have the number of posts present",
+            "match": {
+              "location": "steps.createNewPost.getNumberOfPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 25983900,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "I set the POST service endpoint for adding new blog post with \"body\" and \"title\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"body\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"title\"",
+                  "offset": 73
+                }
+              ],
+              "location": "steps.createNewPost.addBlogPostWithOutCategoryId(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000700,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "check statusCode is 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18989100,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "check response for message \"A database result was required but none was found.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A database result was required but none was found.\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:22.487Z",
+        "line": 84,
+        "name": "TC21 - Returns list of blog posts for specific year",
+        "description": "",
+        "id": "operations-to-blog-posts;tc21---returns-list-of-blog-posts-for-specific-year;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 29983300,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "I set the GET service endpoint for list of posts with parameters 2016 , 1, 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2016",
+                  "offset": 65
+                },
+                {
+                  "val": "1",
+                  "offset": 72
+                },
+                {
+                  "val": "2",
+                  "offset": 75
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.getListOfPostsForYear(int,int,int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28983300,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16991000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "check response for year 2016",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2016",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForYear(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 124930300,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "check response for 1 , 2 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                },
+                {
+                  "val": "2",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:22.705Z",
+        "line": 96,
+        "name": "TC22 - Returns list of blog posts for specific year with default perPage",
+        "description": "",
+        "id": "operations-to-blog-posts;tc22---returns-list-of-blog-posts-for-specific-year-with-default-perpage;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 33979400,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "I set the GET service endpoint for list of posts with parameters 2016",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2016",
+                  "offset": 65
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.getListOfPostsForYear(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999100,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34980900,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28983600,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "check response for year 2016",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2016",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForYear(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 66961500,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "check response for 1 , 10 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                },
+                {
+                  "val": "10",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:22.891Z",
+        "line": 107,
+        "name": "TC23 - Returns list of blog posts for specific month and year",
+        "description": "",
+        "id": "operations-to-blog-posts;tc23---returns-list-of-blog-posts-for-specific-month-and-year;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 39978800,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "I set the GET service endpoint for list of posts with parameters 6 , 2016 , 1, 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 65
+                },
+                {
+                  "val": "2016",
+                  "offset": 69
+                },
+                {
+                  "val": "1",
+                  "offset": 76
+                },
+                {
+                  "val": "2",
+                  "offset": 79
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.getListOfPostsForYearMonth(int,int,int,int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1002000,
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16991000,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34979600,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "check response for 6 and 2016",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 19
+                },
+                {
+                  "val": "2016",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForYearAndMonth(int,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61964600,
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "check response for 1 , 2 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                },
+                {
+                  "val": "2",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:23.066Z",
+        "line": 118,
+        "name": "TC24 - Returns list of blog posts for specific month, year and default perPage",
+        "description": "",
+        "id": "operations-to-blog-posts;tc24---returns-list-of-blog-posts-for-specific-month--year-and-default-perpage;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 29982700,
+              "status": "passed"
+            },
+            "line": 110,
+            "name": "I set the GET service endpoint for list of posts with parameters 6 , 2016",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 65
+                },
+                {
+                  "val": "2016",
+                  "offset": 69
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.getListOfPostsForYearMonth(int,int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 111,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 112,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22990200,
+              "status": "passed"
+            },
+            "line": 113,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39974400,
+              "status": "passed"
+            },
+            "line": 114,
+            "name": "check response for 6 and 2016",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 19
+                },
+                {
+                  "val": "2016",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForYearAndMonth(int,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61964400,
+              "status": "passed"
+            },
+            "line": 115,
+            "name": "check response for 1 , 10 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                },
+                {
+                  "val": "10",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:23.252Z",
+        "line": 129,
+        "name": "TC25 - Returns list of blog posts for specific month , year and date",
+        "description": "",
+        "id": "operations-to-blog-posts;tc25---returns-list-of-blog-posts-for-specific-month---year-and-date;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 66961300,
+              "status": "passed"
+            },
+            "line": 121,
+            "name": "I set the GET service endpoint for list of posts with parameters 11 , 6 , 2016, 1, 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "11",
+                  "offset": 65
+                },
+                {
+                  "val": "6",
+                  "offset": 70
+                },
+                {
+                  "val": "2016",
+                  "offset": 74
+                },
+                {
+                  "val": "1",
+                  "offset": 80
+                },
+                {
+                  "val": "2",
+                  "offset": 83
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.getListOfPostsForYearMonthDate(int,int,int,int,int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 122,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 123,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 37976600,
+              "status": "passed"
+            },
+            "line": 124,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88948500,
+              "status": "passed"
+            },
+            "line": 125,
+            "name": "check response for 11, 6, 2016",
+            "match": {
+              "arguments": [
+                {
+                  "val": "11",
+                  "offset": 19
+                },
+                {
+                  "val": "6",
+                  "offset": 23
+                },
+                {
+                  "val": "2016",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForYearMonthDate(int,int,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76954700,
+              "status": "passed"
+            },
+            "line": 126,
+            "name": "check response for 1 , 2 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                },
+                {
+                  "val": "2",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:23.547Z",
+        "line": 140,
+        "name": "TC26 - Returns list of blog posts for specific month , year, date and default perPage",
+        "description": "",
+        "id": "operations-to-blog-posts;tc26---returns-list-of-blog-posts-for-specific-month---year--date-and-default-perpage;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 46974000,
+              "status": "passed"
+            },
+            "line": 132,
+            "name": "I set the GET service endpoint for list of posts with parameters 11 , 6 , 2016",
+            "match": {
+              "arguments": [
+                {
+                  "val": "11",
+                  "offset": 65
+                },
+                {
+                  "val": "6",
+                  "offset": 70
+                },
+                {
+                  "val": "2016",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.iSetTheGETServiceEndpointForListOfPostsWithParameters(int,int,int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000200,
+              "status": "passed"
+            },
+            "line": 133,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 134,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18993600,
+              "status": "passed"
+            },
+            "line": 135,
+            "name": "validate response json schema with \"listOfPosts.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"listOfPosts.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 65956600,
+              "status": "passed"
+            },
+            "line": 136,
+            "name": "check response for 11, 6, 2016",
+            "match": {
+              "arguments": [
+                {
+                  "val": "11",
+                  "offset": 19
+                },
+                {
+                  "val": "6",
+                  "offset": 23
+                },
+                {
+                  "val": "2016",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForYearMonthDate(int,int,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 77955700,
+              "status": "passed"
+            },
+            "line": 137,
+            "name": "check response for 1 , 10 and totalPages",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                },
+                {
+                  "val": "10",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(int,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:23.773Z",
+        "line": 142,
+        "name": "TC27 - Delete blog post that doesn\u0027t exist",
+        "description": "",
+        "id": "operations-to-blog-posts;tc27---delete-blog-post-that-doesn-t-exist",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 29985000,
+              "status": "passed"
+            },
+            "line": 143,
+            "name": "I set the DELETE service endpoint for deleting a blog post with postID 29",
+            "match": {
+              "arguments": [
+                {
+                  "val": "29",
+                  "offset": 71
+                }
+              ],
+              "location": "steps.deletePost.deletePostForPostId(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 144,
+            "name": "check statusCode is 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 145,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26985600,
+              "status": "passed"
+            },
+            "line": 146,
+            "name": "check response for message \"A database result was required but none was found.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A database result was required but none was found.\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:23.860Z",
+        "line": 148,
+        "name": "TC28 - Delete blog post",
+        "description": "",
+        "id": "operations-to-blog-posts;tc28---delete-blog-post",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 55966600,
+              "status": "passed"
+            },
+            "line": 149,
+            "name": "I set the DELETE service endpoint for deleting a blog post with postID 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 71
+                }
+              ],
+              "location": "steps.deletePost.deletePostForPostId(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c204\u003e but was:\u003c404\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat steps.commonSteps.checkStatusCodeIs(commonSteps.java:24)\r\n\tat ✽.check statusCode is 204(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogPosts.feature:150)\r\n",
+              "duration": 998300,
+              "status": "failed"
+            },
+            "line": 150,
+            "name": "check statusCode is 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1001100,
+              "status": "skipped"
+            },
+            "line": 151,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 152,
+            "name": "check get list of posts response for postID 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 44
+                }
+              ],
+              "location": "steps.deletePost.checkGetListForPostId(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:23.950Z",
+        "line": 154,
+        "name": "TC29 - Get a blog post by id that doesn\u0027t exist",
+        "description": "",
+        "id": "operations-to-blog-posts;tc29---get-a-blog-post-by-id-that-doesn-t-exist",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 31981400,
+              "status": "passed"
+            },
+            "line": 155,
+            "name": "I set the GET service endpoint for posts with 101 and receive response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "101",
+                  "offset": 46
+                }
+              ],
+              "location": "steps.getPost.getPostsWithPostID(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1002100,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "check statusCode is 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 157,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15990100,
+              "status": "passed"
+            },
+            "line": 158,
+            "name": "check response for message \"A database result was required but none was found.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A database result was required but none was found.\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:24.024Z",
+        "line": 160,
+        "name": "TC30 - Get a blog post by id",
+        "description": "",
+        "id": "operations-to-blog-posts;tc30---get-a-blog-post-by-id",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 20988600,
+              "status": "passed"
+            },
+            "line": 161,
+            "name": "I set the GET service endpoint for posts with 1 and receive response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 46
+                }
+              ],
+              "location": "steps.getPost.getPostsWithPostID(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 162,
+            "name": "check statusCode is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 998200,
+              "status": "passed"
+            },
+            "line": 163,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9995100,
+              "status": "passed"
+            },
+            "line": 164,
+            "name": "validate response json schema with \"post.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"post.json\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.commonSteps.validateResponseJsonSchema(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17989100,
+              "status": "passed"
+            },
+            "line": 165,
+            "name": "check response for postID 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.getPost.checkResponseForPostID(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:24.093Z",
+        "line": 167,
+        "name": "TC31 - Update a post for postID with all details",
+        "description": "",
+        "id": "operations-to-blog-posts;tc31---update-a-post-for-postid-with-all-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 29983200,
+              "status": "passed"
+            },
+            "line": 168,
+            "name": "I set the PUT service endpoint for updating a blog post with postId 1 with categoryId 1 and pass updated body \"this is new body\" and updated title \"this is new body\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 68
+                },
+                {
+                  "val": "1",
+                  "offset": 86
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 110
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 147
+                }
+              ],
+              "location": "steps.updatePosts.updatePostForId(int,int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999000,
+              "status": "passed"
+            },
+            "line": 169,
+            "name": "check statusCode is 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 170,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84951000,
+              "status": "passed"
+            },
+            "line": 171,
+            "name": "check get post for postID 1 response to match categoryID to 1, body to \"this is new body\",title to \"this is new body\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 26
+                },
+                {
+                  "val": "1",
+                  "offset": 60
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 99
+                }
+              ],
+              "location": "steps.updatePosts.checkPostForPostIDResponseToMatchCategoryIdBodyTitleT(int,int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:24.225Z",
+        "line": 174,
+        "name": "TC32 - Update a post for postID with no categoryId",
+        "description": "",
+        "id": "operations-to-blog-posts;tc32---update-a-post-for-postid-with-no-categoryid",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 25987700,
+              "status": "passed"
+            },
+            "line": 175,
+            "name": "I set the PUT service endpoint for updating a blog post with postId 1 and pass updated body \"this is new body\" and updated title \"this is new body\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 68
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 92
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 129
+                }
+              ],
+              "location": "steps.updatePosts.updatePostForIdWithNoCategoryId(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 176,
+            "name": "check statusCode is 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 177,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21984800,
+              "status": "passed"
+            },
+            "line": 178,
+            "name": "check response for message \"A database result was required but none was found.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A database result was required but none was found.\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:24.293Z",
+        "line": 180,
+        "name": "TC33 - Update a post for postID with no title",
+        "description": "",
+        "id": "operations-to-blog-posts;tc33---update-a-post-for-postid-with-no-title",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13991300,
+              "status": "passed"
+            },
+            "line": 181,
+            "name": "I set the PUT service endpoint for updating a blog post with postId 1 with categoryId 1 and pass updated body \"this is new body\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 68
+                },
+                {
+                  "val": "1",
+                  "offset": 86
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 110
+                }
+              ],
+              "location": "steps.updatePosts.updatePostForIdWithNoTitle(int,int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2005400,
+              "status": "passed"
+            },
+            "line": 182,
+            "name": "check statusCode is 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 992500,
+              "status": "passed"
+            },
+            "line": 183,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19987800,
+              "status": "passed"
+            },
+            "line": 184,
+            "name": "check response for message \"Input payload validation failed\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Input payload validation failed\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:24.352Z",
+        "line": 186,
+        "name": "TC34 - Update a post for postID with no body",
+        "description": "",
+        "id": "operations-to-blog-posts;tc34---update-a-post-for-postid-with-no-body",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 18987700,
+              "status": "passed"
+            },
+            "line": 187,
+            "name": "I set the PUT service endpoint for updating a blog post with postId 1 with categoryId 1 and pass updated title \"this is new body\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 68
+                },
+                {
+                  "val": "1",
+                  "offset": 86
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 111
+                }
+              ],
+              "location": "steps.updatePosts.updatePostForIdWithNoBody(int,int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 998300,
+              "status": "passed"
+            },
+            "line": 188,
+            "name": "check statusCode is 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 189,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23986000,
+              "status": "passed"
+            },
+            "line": 190,
+            "name": "check response for message \"Input payload validation failed\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Input payload validation failed\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T17:56:24.413Z",
+        "line": 192,
+        "name": "TC35 - Update a post for postID with all details",
+        "description": "",
+        "id": "operations-to-blog-posts;tc35---update-a-post-for-postid-with-all-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 25985400,
+              "status": "passed"
+            },
+            "line": 193,
+            "name": "I set the PUT service endpoint for updating a blog post with postId 30 with categoryId 1 and pass updated body \"this is new body\" and updated title \"this is new body\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "30",
+                  "offset": 68
+                },
+                {
+                  "val": "1",
+                  "offset": 87
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 111
+                },
+                {
+                  "val": "\"this is new body\"",
+                  "offset": 148
+                }
+              ],
+              "location": "steps.updatePosts.updatePostForId(int,int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 194,
+            "name": "check statusCode is 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.commonSteps.checkStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999700,
+              "status": "passed"
+            },
+            "line": 195,
+            "name": "check response content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.commonSteps.responseContentTypeIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23987100,
+              "status": "passed"
+            },
+            "line": 196,
+            "name": "check response for message \"A database result was required but none was found.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A database result was required but none was found.\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.commonSteps.checkResponseForMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Operations to blog posts",
+    "description": "",
+    "id": "operations-to-blog-posts",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/featureFiles/blogPosts.feature",
+    "tags": []
+  }
+]

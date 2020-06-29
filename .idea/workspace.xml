@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9cac8c0-d9ef-4ed7-84e7-b07fdf5ee0a5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="235" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Substep Feature" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1drU2lDHVeXbw5N0qPsPGrfT5qS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\resources\Featurefiles" />
+      <recent name="C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\resources\apiTests\Featurefiles\Operations related to blog categories\Operations related to blog categories" />
+      <recent name="C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\resources\apiTests\Featurefiles\" />
+      <recent name="C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\resources\apiTests\Featurefiles\Operations related to blog categories" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber java.All Features in: LumiraDXblogAPI">
+    <configuration name="All Features in: LumiraDXblogAPI" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="LumiraDXblogAPI" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="All Features in: LumiraDXblogAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Returns list of blog posts" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureFiles/Operations related to blog posts/listOfBlogPosts.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="LumiraDXblogAPI" />
+      <option name="NAME_FILTER" value="^Returns list of blog posts$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Returns list of blog posts$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Returns list of blog posts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: TC06 - Add a new category using only id" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureFiles/blogCategory.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="LumiraDXblogAPI" />
+      <option name="NAME_FILTER" value="^TC06 \- Add a new category using only id$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC06 \- Add a new category using only id$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC06 - Add a new category using only id" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: TC15 - Returns list of blog posts" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureFiles/blogPosts.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="LumiraDXblogAPI" />
+      <option name="NAME_FILTER" value="^TC15 \- Returns list of blog posts$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC15 \- Returns list of blog posts$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC15 - Returns list of blog posts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: TC18 - Create a new blog post with no body" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/featureFiles/blogPosts.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="LumiraDXblogAPI" />
+      <option name="NAME_FILTER" value="^TC18 \- Create a new blog post with no body$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC18 \- Create a new blog post with no body$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC18 - Create a new blog post with no body" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LumiraDXblogAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.TestRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber java.All Features in: LumiraDXblogAPI" />
+        <item itemvalue="JUnit.TestRunner" />
+        <item itemvalue="Cucumber java.Scenario: TC18 - Create a new blog post with no body" />
+        <item itemvalue="Cucumber java.Scenario: TC15 - Returns list of blog posts" />
+        <item itemvalue="Cucumber java.Scenario: TC06 - Add a new category using only id" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9cac8c0-d9ef-4ed7-84e7-b07fdf5ee0a5" name="Default Changelist" comment="" />
+      <created>1593182504019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593182504019</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Intentions" timestamp="1593274693020">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1593274693020" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593185452586">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1593185452586" />
+    <state x="-1274" y="-61" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1593392562579">
+      <screen x="-1366" y="-153" width="1366" height="728" />
+    </state>
+    <state x="-1274" y="-61" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1366.-153.1366.728/0.0.1366.728@-1366.-153.1366.728" timestamp="1593392562579" />
+    <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1593253448311" />
+    <state x="407" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593253157077">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="407" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1593253157076" />
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1593273832917">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1593273832917" />
+    <state x="-887" y="70" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593389710888">
+      <screen x="-1366" y="-153" width="1366" height="728" />
+    </state>
+    <state x="-887" y="70" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1366.-153.1366.728/0.0.1366.728@-1366.-153.1366.728" timestamp="1593389710888" />
+    <state x="505" y="280" width="660" height="168" key="Github.CreateGistDialog" timestamp="1593453747972">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="505" y="280" width="660" height="168" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1593453747972" />
+    <state width="1323" height="210" key="GridCell.Tab.0.bottom" timestamp="1593455546557">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="305" key="GridCell.Tab.0.bottom/-1366.-153.1366.728/0.0.1366.728@-1366.-153.1366.728" timestamp="1593395900201" />
+    <state width="1323" height="210" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593455546557" />
+    <state width="1323" height="210" key="GridCell.Tab.0.center" timestamp="1593455546557">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="305" key="GridCell.Tab.0.center/-1366.-153.1366.728/0.0.1366.728@-1366.-153.1366.728" timestamp="1593395900201" />
+    <state width="1323" height="210" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593455546557" />
+    <state width="1323" height="210" key="GridCell.Tab.0.left" timestamp="1593455546557">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="305" key="GridCell.Tab.0.left/-1366.-153.1366.728/0.0.1366.728@-1366.-153.1366.728" timestamp="1593395900201" />
+    <state width="1323" height="210" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593455546557" />
+    <state width="1323" height="210" key="GridCell.Tab.0.right" timestamp="1593455546557">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="305" key="GridCell.Tab.0.right/-1366.-153.1366.728/0.0.1366.728@-1366.-153.1366.728" timestamp="1593395900201" />
+    <state width="1323" height="210" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593455546557" />
+    <state width="1323" height="352" key="GridCell.Tab.1.bottom" timestamp="1593364035625">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="352" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593364035625" />
+    <state width="1323" height="352" key="GridCell.Tab.1.center" timestamp="1593364035625">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="352" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1593364035625" />
+    <state width="1323" height="352" key="GridCell.Tab.1.left" timestamp="1593364035625">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="352" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1593364035625" />
+    <state width="1323" height="352" key="GridCell.Tab.1.right" timestamp="1593364035625">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="352" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1593364035625" />
+    <state x="259" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1593342500852">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="259" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1593342500852" />
+    <state x="435" y="285" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1593338015894">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="435" y="285" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1593338015894" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1593454108888">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1027" y="9" key="run.anything.popup/-1366.-153.1366.728/0.0.1366.728@-1366.-153.1366.728" timestamp="1593393185274" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1593454108888" />
+    <state x="-1020" y="-104" width="672" height="678" key="search.everywhere.popup" timestamp="1593388846857">
+      <screen x="-1366" y="-153" width="1366" height="728" />
+    </state>
+    <state x="-1020" y="-104" width="672" height="678" key="search.everywhere.popup/-1366.-153.1366.728/0.0.1366.728@-1366.-153.1366.728" timestamp="1593388846857" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593251531729" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LumiraDXblogAPI$All_Features_in__LumiraDXblogAPI.ic" NAME="All Features in: LumiraDXblogAPI Coverage Results" MODIFIED="1593454057248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>io.cucumber.core.cli.*</FILTER>
+    </SUITE>
+  </component>
+</project>

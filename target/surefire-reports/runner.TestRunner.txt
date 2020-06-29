@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 36, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 15.503 sec <<< FAILURE!
+TC02 - Add a new category using id and name(Operations to blog category)  Time elapsed: 1.664 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[G]ardening> but was:<[]ardening>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:106)
+	at ?.check get list of categories response for the name of the item with id 4 to be "Gardening"(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:15)
+
+TC02 - Add a new category using id and name(Operations to blog category)  Time elapsed: 0.583 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[S]ports> but was:<[]ports>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:106)
+	at ?.check get list of categories response for the name of the item with id 5 to be "Sports"(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:15)
+
+TC03 - Add a new category using name(Operations to blog category)  Time elapsed: 0.358 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Travel]> but was:<[ature]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.blogCategories.checkIfAddedNameIsCorrect(blogCategories.java:41)
+	at ?.check get list of categories response for the name of the last item to be "Travel"(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:27)
+
+TC14 - Returns list of blog posts(Operations to blog posts)  Time elapsed: 0.159 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<2> but was:<1>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at steps.listsOfBlogPosts.checkResponseForTotalPostsTotalPages(listsOfBlogPosts.java:24)
+	at ?.check response for 2 , 2 and totalPages(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogPosts.feature:18)
+

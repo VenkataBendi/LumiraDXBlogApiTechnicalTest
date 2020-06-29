@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "body": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "category_id": {
+      "type": "integer"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "pub_date": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "body",
+    "category",
+    "category_id",
+    "id",
+    "pub_date",
+    "title"
+  ]
+}
