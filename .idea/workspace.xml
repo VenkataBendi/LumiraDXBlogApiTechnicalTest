@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9cac8c0-d9ef-4ed7-84e7-b07fdf5ee0a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apiUtils/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiUtils/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/LumiraDXblogAPI.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apiUtils/Base.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apiUtils/Base.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-html-report" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-pretty.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-runner.TestRunner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-runner.TestRunner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/runner.TestRunner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/runner.TestRunner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/LumiraDXblogAPI.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-Test Reports/api_cucumber_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-Test Reports/api_cucumber_report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-Test Reports/api_cucumber_report.json" beforeDir="false" afterPath="$PROJECT_DIR$/test-Test Reports/api_cucumber_report.json" afterDir="false" />
-    </list>
+    <list default="true" id="f9cac8c0-d9ef-4ed7-84e7-b07fdf5ee0a5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
