@@ -183,6 +183,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1593274693020" />
+    <state x="275" y="22" key="#Notifications" timestamp="1593482415045">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1593482415045" />
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593185452586">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -204,6 +208,10 @@
       <screen x="-1366" y="-153" width="1366" height="728" />
     </state>
     <state x="-887" y="70" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1366.-153.1366.728/0.0.1366.728@-1366.-153.1366.728" timestamp="1593389710888" />
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1593482386327">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593482386327" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1593481289908">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -248,6 +256,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="352" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1593364035625" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1593482397050">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593482397050" />
     <state x="259" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1593342500852">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
