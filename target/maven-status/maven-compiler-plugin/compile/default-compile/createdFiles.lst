@@ -1,2 +1,3 @@
-apiUtils\Base.class
+apiUtils\Posts.class
 apiUtils\Categories.class
+apiUtils\Base.class

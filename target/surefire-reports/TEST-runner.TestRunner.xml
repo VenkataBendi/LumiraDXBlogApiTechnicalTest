@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="36" failures="4" name="runner.TestRunner" time="13.813" errors="0" skipped="0">
+<testsuite tests="36" failures="4" name="runner.TestRunner" time="14.846" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="14.0.1+7"/>
@@ -60,12 +60,12 @@
     <property name="sun.stdout.encoding" value="cp850"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Operations to blog category" name="TC01 - Returns list of all blog categories" time="4.599"/>
-  <testcase classname="Operations to blog category" name="TC02 - Add a new category using id and name" time="1.664">
+  <testcase classname="Operations to blog category" name="TC01 - Returns list of all blog categories" time="4.798"/>
+  <testcase classname="Operations to blog category" name="TC02 - Add a new category using id and name" time="1.851">
     <failure message="expected:&lt;[G]ardening&gt; but was:&lt;[]ardening&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[G]ardening&gt; but was:&lt;[]ardening&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:106)
+	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:105)
 	at ✽.check get list of categories response for the name of the item with id 4 to be &quot;Gardening&quot;(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:15)
 </failure>
     <system-out>
@@ -79,16 +79,16 @@ Scenario Outline: TC02 - Add a new category using id and name                   
       org.junit.ComparisonFailure: expected:&lt;[G]ardening&gt; but was:&lt;[]ardening&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:106)
+	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:105)
 	at âœ½.check get list of categories response for the name of the item with id 4 to be &quot;Gardening&quot;(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:15)
 
 </system-out>
   </testcase>
-  <testcase classname="Operations to blog category" name="TC02 - Add a new category using id and name" time="0.583">
+  <testcase classname="Operations to blog category" name="TC02 - Add a new category using id and name" time="0.808">
     <failure message="expected:&lt;[S]ports&gt; but was:&lt;[]ports&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[S]ports&gt; but was:&lt;[]ports&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:106)
+	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:105)
 	at ✽.check get list of categories response for the name of the item with id 5 to be &quot;Sports&quot;(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:15)
 </failure>
     <system-out>
@@ -102,17 +102,17 @@ Scenario Outline: TC02 - Add a new category using id and name                   
       org.junit.ComparisonFailure: expected:&lt;[S]ports&gt; but was:&lt;[]ports&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:106)
+	at steps.blogCategories.checkGetResponseForTheNameOfhIdToBe(blogCategories.java:105)
 	at âœ½.check get list of categories response for the name of the item with id 5 to be &quot;Sports&quot;(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:15)
 
 </system-out>
   </testcase>
-  <testcase classname="Operations to blog category" name="TC03 - Add a new category using name" time="0.358">
-    <failure message="expected:&lt;[Travel]&gt; but was:&lt;[ature]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[Travel]&gt; but was:&lt;[ature]&gt;
+  <testcase classname="Operations to blog category" name="TC03 - Add a new category using name" time="0.478">
+    <failure message="expected:&lt;[N]ature&gt; but was:&lt;[]ature&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[N]ature&gt; but was:&lt;[]ature&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at steps.blogCategories.checkIfAddedNameIsCorrect(blogCategories.java:41)
-	at ✽.check get list of categories response for the name of the last item to be &quot;Travel&quot;(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:27)
+	at steps.blogCategories.checkIfAddedNameIsCorrect(blogCategories.java:40)
+	at ✽.check get list of categories response for the name of the last item to be &quot;Nature&quot;(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:27)
 </failure>
     <system-out>
 Scenario Outline: TC03 - Add a new category using name                                        # src/test/resources/featureFiles/blogCategory.feature:30
@@ -121,26 +121,26 @@ Scenario Outline: TC03 - Add a new category using name                          
   Then check statusCode is 201                                                                # steps.commonSteps.checkStatusCodeIs(int)
   And check response content type is &quot;application/json&quot;                                       # steps.commonSteps.responseContentTypeIs(java.lang.String)
   And check the get list of categories response if number of categories is incremented by one # steps.blogCategories.checkCategoryListSizeAfterAddingNewCategory()
-  And check get list of categories response for the name of the last item to be &quot;Travel&quot;      # steps.blogCategories.checkIfAddedNameIsCorrect(java.lang.String)
-      org.junit.ComparisonFailure: expected:&lt;[Travel]&gt; but was:&lt;[ature]&gt;
+  And check get list of categories response for the name of the last item to be &quot;Nature&quot;      # steps.blogCategories.checkIfAddedNameIsCorrect(java.lang.String)
+      org.junit.ComparisonFailure: expected:&lt;[N]ature&gt; but was:&lt;[]ature&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at steps.blogCategories.checkIfAddedNameIsCorrect(blogCategories.java:41)
-	at âœ½.check get list of categories response for the name of the last item to be &quot;Travel&quot;(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:27)
+	at steps.blogCategories.checkIfAddedNameIsCorrect(blogCategories.java:40)
+	at âœ½.check get list of categories response for the name of the last item to be &quot;Nature&quot;(file:///C:/Users/Krishna/eclipse-workspace/LumiraDXblogAPI/src/test/resources/featureFiles/blogCategory.feature:27)
 
 </system-out>
   </testcase>
-  <testcase classname="Operations to blog category" name="TC04 - Add a new category using int data type for name" time="0.098"/>
-  <testcase classname="Operations to blog category" name="TC05 - Add a new category using an existing id and name" time="0.978"/>
-  <testcase classname="Operations to blog category" name="TC06 - Add a new category using only id" time="0.12"/>
-  <testcase classname="Operations to blog category" name="TC07 - Delete a category with id that doesn&apos;t exist" time="0.133"/>
-  <testcase classname="Operations to blog category" name="TC08 - Delete a category with id in endpoint" time="0.371"/>
-  <testcase classname="Operations to blog category" name="TC09 - Return a category with a list of posts for a valid category id" time="0.162"/>
-  <testcase classname="Operations to blog category" name="TC10 - Return a category with a list of posts for invalid category id" time="0.082"/>
-  <testcase classname="Operations to blog category" name="TC11 - Updates a blog category" time="0.324"/>
-  <testcase classname="Operations to blog category" name="TC12 - Update a category using an id that doesn&apos;t exist" time="0.104"/>
-  <testcase classname="Operations to blog posts" name="TC13 - Returns list of blog posts" time="0.351"/>
-  <testcase classname="Operations to blog posts" name="TC14 - Returns list of blog posts" time="0.159">
+  <testcase classname="Operations to blog category" name="TC04 - Add a new category using int data type for name" time="0.058"/>
+  <testcase classname="Operations to blog category" name="TC05 - Add a new category using an existing id and name" time="0.666"/>
+  <testcase classname="Operations to blog category" name="TC06 - Add a new category using only id" time="0.172"/>
+  <testcase classname="Operations to blog category" name="TC07 - Delete a category with id that doesn&apos;t exist" time="0.123"/>
+  <testcase classname="Operations to blog category" name="TC08 - Delete a category with id in endpoint" time="0.256"/>
+  <testcase classname="Operations to blog category" name="TC09 - Return a category with a list of posts for a valid category id" time="0.149"/>
+  <testcase classname="Operations to blog category" name="TC10 - Return a category with a list of posts for invalid category id" time="0.097"/>
+  <testcase classname="Operations to blog category" name="TC11 - Updates a blog category" time="0.39"/>
+  <testcase classname="Operations to blog category" name="TC12 - Update a category using an id that doesn&apos;t exist" time="0.099"/>
+  <testcase classname="Operations to blog posts" name="TC13 - Returns list of blog posts" time="0.398"/>
+  <testcase classname="Operations to blog posts" name="TC14 - Returns list of blog posts" time="0.266">
     <failure message="expected:&lt;2&gt; but was:&lt;1&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;1&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
@@ -166,25 +166,25 @@ Scenario Outline: TC14 - Returns list of blog posts                             
 
 </system-out>
   </testcase>
-  <testcase classname="Operations to blog posts" name="TC15 - Returns list of blog posts" time="0.195"/>
-  <testcase classname="Operations to blog posts" name="TC16 - Returns list of blog posts without query parameters" time="0.213"/>
-  <testcase classname="Operations to blog posts" name="TC17 -  Create a new blog post" time="0.39"/>
-  <testcase classname="Operations to blog posts" name="TC18 - Create a new blog post with no body" time="0.118"/>
-  <testcase classname="Operations to blog posts" name="TC19 - Create a new blog post with no title" time="0.204"/>
-  <testcase classname="Operations to blog posts" name="TC20 - Create a new blog post with no categoryId" time="0.22"/>
-  <testcase classname="Operations to blog posts" name="TC21 - Returns list of blog posts for specific year" time="0.222"/>
-  <testcase classname="Operations to blog posts" name="TC22 - Returns list of blog posts for specific year with default perPage" time="0.221"/>
-  <testcase classname="Operations to blog posts" name="TC23 - Returns list of blog posts for specific month and year" time="0.233"/>
-  <testcase classname="Operations to blog posts" name="TC24 - Returns list of blog posts for specific month, year and default perPage" time="0.187"/>
-  <testcase classname="Operations to blog posts" name="TC25 - Returns list of blog posts for specific month , year and date" time="0.217"/>
-  <testcase classname="Operations to blog posts" name="TC26 - Returns list of blog posts for specific month , year, date and default perPage" time="0.257"/>
-  <testcase classname="Operations to blog posts" name="TC27 - Delete blog post that doesn&apos;t exist" time="0.15"/>
-  <testcase classname="Operations to blog posts" name="TC28 - Delete blog post" time="0.215"/>
-  <testcase classname="Operations to blog posts" name="TC29 - Get a blog post by id that doesn&apos;t exist" time="0.074"/>
-  <testcase classname="Operations to blog posts" name="TC30 - Get a blog post by id" time="0.083"/>
-  <testcase classname="Operations to blog posts" name="TC31 - Update a post for postID with all details" time="0.261"/>
-  <testcase classname="Operations to blog posts" name="TC32 - Update a post for postID with no categoryId" time="0.067"/>
-  <testcase classname="Operations to blog posts" name="TC33 - Update a post for postID with no title" time="0.1"/>
-  <testcase classname="Operations to blog posts" name="TC34 - Update a post for postID with no body" time="0.044"/>
-  <testcase classname="Operations to blog posts" name="TC35 - Update a post for postID with all details" time="0.056"/>
+  <testcase classname="Operations to blog posts" name="TC15 - Returns list of blog posts" time="0.154"/>
+  <testcase classname="Operations to blog posts" name="TC16 - Returns list of blog posts without query parameters" time="0.201"/>
+  <testcase classname="Operations to blog posts" name="TC17 -  Create a new blog post" time="0.477"/>
+  <testcase classname="Operations to blog posts" name="TC18 - Create a new blog post with no body" time="0.326"/>
+  <testcase classname="Operations to blog posts" name="TC19 - Create a new blog post with no title" time="0.156"/>
+  <testcase classname="Operations to blog posts" name="TC20 - Create a new blog post with no categoryId" time="0.1"/>
+  <testcase classname="Operations to blog posts" name="TC21 - Returns list of blog posts for specific year" time="0.217"/>
+  <testcase classname="Operations to blog posts" name="TC22 - Returns list of blog posts for specific year with default perPage" time="0.205"/>
+  <testcase classname="Operations to blog posts" name="TC23 - Returns list of blog posts for specific month and year" time="0.238"/>
+  <testcase classname="Operations to blog posts" name="TC24 - Returns list of blog posts for specific month, year and default perPage" time="0.3"/>
+  <testcase classname="Operations to blog posts" name="TC25 - Returns list of blog posts for specific month , year and date" time="0.292"/>
+  <testcase classname="Operations to blog posts" name="TC26 - Returns list of blog posts for specific month , year, date and default perPage" time="0.214"/>
+  <testcase classname="Operations to blog posts" name="TC27 - Delete blog post that doesn&apos;t exist" time="0.139"/>
+  <testcase classname="Operations to blog posts" name="TC28 - Delete blog post" time="0.347"/>
+  <testcase classname="Operations to blog posts" name="TC29 - Get a blog post by id that doesn&apos;t exist" time="0.085"/>
+  <testcase classname="Operations to blog posts" name="TC30 - Get a blog post by id" time="0.144"/>
+  <testcase classname="Operations to blog posts" name="TC31 - Update a post for postID with all details" time="0.231"/>
+  <testcase classname="Operations to blog posts" name="TC32 - Update a post for postID with no categoryId" time="0.274"/>
+  <testcase classname="Operations to blog posts" name="TC33 - Update a post for postID with no title" time="0.086"/>
+  <testcase classname="Operations to blog posts" name="TC34 - Update a post for postID with no body" time="0.039"/>
+  <testcase classname="Operations to blog posts" name="TC35 - Update a post for postID with all details" time="0.012"/>
 </testsuite>

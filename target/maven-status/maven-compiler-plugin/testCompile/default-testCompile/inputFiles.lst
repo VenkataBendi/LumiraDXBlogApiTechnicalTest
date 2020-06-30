@@ -1,2 +1,9 @@
-C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\steps\steps.java
+C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\restUtils\RestUtil.java
+C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\steps\blogCategories.java
+C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\steps\updatePosts.java
+C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\steps\createNewPost.java
+C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\steps\commonSteps.java
+C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\steps\deletePost.java
 C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\runner\TestRunner.java
+C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\steps\listsOfBlogPosts.java
+C:\Users\Krishna\eclipse-workspace\LumiraDXblogAPI\src\test\java\steps\getPost.java

@@ -1,1 +1,9 @@
+steps\commonSteps.class
+steps\blogCategories.class
+steps\updatePosts.class
+steps\createNewPost.class
+steps\getPost.class
+steps\listsOfBlogPosts.class
+restUtils\RestUtil.class
+steps\deletePost.class
 runner\TestRunner.class
