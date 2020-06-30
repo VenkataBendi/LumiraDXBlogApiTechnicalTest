@@ -1,13 +1,20 @@
-# LumiraDXblogApiTechnicalTest
+# LumiraDX blog API Technical Test
+
 This is automation suite designed to test the Swagger LumiraDX Blog API Prototype Blog API v0.2.\
-The project has 35 scenarios  in total that can be located within the below feature files\
+
+The project has 35 scenarios in total, that can be located within the below feature files\
 * src/test/resources/featureFiles/blogCategory.feature : Scenarios 1-12 cover the operations related to blog categories
 * src/test/resources/featureFiles/blogPosts.feature : Scenarios 13-35 cover the operations related to blog posts
 
-
- -python 3 (for the application
+#Tools/Framwork/Libraries
+*JDK 14
+*Maven - build tool
+JUnit - assertions
+Cucumber - BDD/Gherkin style feature files and runner
+Rest assured - Rest api verification library
  
- Before running the automation suite the application LumiraDX blog api needs to be started follwing the instructions provided in the link below
+# Launch the Swagger application 
+ Before running the automation suite the application LumiraDX blog api needs to be started following the instructions provided in the link below
  https://github.com/amaccormack-lumira/rest_api_demo/blob/master/README.md
  
  If the base URL has to be changed it can be done in the below file location\
@@ -17,7 +24,7 @@ The project has 35 scenarios  in total that can be located within the below feat
  public static final String BASE_URL = "http://localhost:8888/api";
  ```
  
-**Note:** This automation has implemented the end point  " http://localhost:8888/api/ "\
+**Note:** This automation test suite has implemented the end point  " http://localhost:8888/api/ "\
 
 **_I was not able to load https://localhost:8889/api/_** with the instructions provided.
 
@@ -35,7 +42,21 @@ You will need:
   -Intellij or another Java IDE
  ```
  
- In order to execute the automation suite navigate to the 
+Download a copy of the automation project from: https://github.com/VenkataBendi/LumiraDXblogApiTechnicalTest/archive/master.zip \
+
+Once downloaded, extract the zip file, and use a Command Prompt to naviage to the the extracted project folder. The automation test can then be run using the following command:
+```
+mvn clean test
+```
+All the 35 scenarios will be executed. A cucumber report file will be generated and can be found in the below path in the extracted project folder
+'test-Test Reports/api_cucumber_report.html'
+
+# Expected Results
+All Scenarios except TC02,TC03 and TC14 will pass.\
+TC02(two examples), TC03 and TC14 fail due to bugs in the api application detailed in the bug report.
+
+**To re-run the automation test suite with the same test data, it is required to download the swagger application file again and re-launch. If this is not performed in addition to the above failed scenarios TC28 will also fail. Hoever, TC02(first example) and TC28 fail due to invalid test data**
+
  
  
  
