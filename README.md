@@ -60,7 +60,7 @@ All Scenarios except TC02,TC03 and TC14 will pass.
 
 TC02(two examples), TC03 and TC14 fail due to bugs in the api application detailed in the bug report.
 
-**To re-run the automation test suite with the same test data, it is required to extract the swagger application file again and re-launch. If this is not performed in addition to the above failed scenarios TC28 will also fail. Hoever, TC02(first example) and TC28 fail due to invalid test data**
+**To re-run the automation test suite with the same test data, it is required to extract the swagger application file again and re-launch. If this is not performed in addition to the above failed scenarios TC28 will also fail. However, TC02(first example) and TC28 fail due to invalid test data**
 
  
  
